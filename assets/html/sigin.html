@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nolacake | Cadastro</title>
+        <link rel="stylesheet" href="../css/acesso.css">
+        <link rel="shortcut icon" href="../imgs/favicon.ico" type="image/x-icon">
+    </head>
+    <body>
+        <span id="box"></span>
+        <section id="login">
+            <section class="img sigin"></section>
+            <form id="formLogin" action="">
+                <h1 id="formTittle">Seja Bem Vindo(a)</h1>
+                <section class="forms nome">
+                    <label for="nome">Nome Completo</label>
+                    <input class="txtInput" type="text" id="nome">
+                </section>
+                <section class="forms email">
+                    <label for="email">E-mail</label>
+                    <input class="txtInput" type="email" id="email">
+                </section>
+                <section class="forms senha"    >
+                    <label for="password">Senha</label>
+                    <span id="eye" onclick="passwordReveal()"></span>
+                    <input class="txtInput" type="password" id="password">
+                </section>
+                <button id="entrar">Entrar</button>
+                <p id="criarConta">Já possui uma conta? <a href="login.html">Entrar</a></p>
+            </form>
+        </section>
+        <script src="../javascript/script.js"></script>
+    </body>
+</html>

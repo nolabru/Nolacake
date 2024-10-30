@@ -1,0 +1,141 @@
+@import url(global.css);
+
+*{
+    font-family: 'Quicksand', sans-serif;
+}
+
+body{
+    height: 100vh;
+    background: var(--cor1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#box{
+    width: 100%;
+    height: 50%;
+    background: var(--cor2);
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+}
+
+#login{
+    width: 60%;
+    height: 60%;
+    display: flex;
+}
+
+.img{
+    width: 50%;
+}
+
+.img.login{
+    background: url(assets/bgLogin.png);
+    background-size: cover;
+}
+
+.img.sigin{
+    background: url(assets/bgSigin.png);
+    background-size: cover;
+}
+
+#formLogin{
+    width: 50%;
+    background: #fff;
+    border-radius: 0 30px 30px 0;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    align-items: center;
+}
+
+#formTittle{
+    font-weight: 400;
+    color: var(--cor1);
+    
+}
+
+#opcoesSenha{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 15px;
+}
+
+#opcoesSenha>a, #criarConta>a{
+    text-decoration: underline;
+    color: var(--cor1);
+    font-weight: 500;
+}
+
+#opcoesSenha label{
+    font-size: 15px;
+}
+
+#opcoesSenha input{
+    accent-color: var(--cor1);
+    cursor: pointer;
+}
+
+.txtInput{
+    background: var(--cor4);
+    height: 40px;
+    padding: 0 15px;
+    font-size: 16px;
+    color: var(--cor3);
+}
+
+.txtInput:focus{
+    outline: none;
+}
+
+#entrar{
+    background: var(--cor1);
+    color: #fff;
+    font-size: 17px;
+    padding: 10px 75px;
+    border-radius: 20px;
+    margin-top: 40px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+#entrar:hover{
+    transform: translateY(-2px);
+}
+
+.forms{
+    width: 100%;
+    margin-top: 30px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+#criarConta{
+    margin-top: 15px;
+}
+
+#eye{
+    width: 20px;
+    height: 20px;
+    background: url(assets/eye-fill.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    cursor: pointer;
+    transition: .5s;
+}
+
+#eye.reveal{
+    background: url(assets/eye-slash-fill.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: .5s;
+}
