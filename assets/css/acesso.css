@@ -1,15 +1,12 @@
 @import url(global.css);
 
-*{
-    font-family: 'Quicksand', sans-serif;
-}
-
 body{
     height: 100vh;
     background: var(--cor1);
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: 'Quicksand', sans-serif;
 }
 
 #box{
@@ -22,8 +19,8 @@ body{
 }
 
 #login{
-    width: 60%;
-    height: 60%;
+    width: 65%;
+    height: 65%;
     display: flex;
 }
 

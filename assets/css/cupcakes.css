@@ -1,0 +1,32 @@
+@import url(global.css);
+
+body {
+    background: var(--cor5);
+}
+
+.navBarItem>a {
+    color: var(--cor1);
+    font-weight: 500;
+}
+
+.navBarItem{
+    margin: 0 10px;
+}
+
+#pesquisar{
+    position: relative;
+}
+
+#pesquisar>span{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 50%;
+    left: 10px;
+    transform: translate(-50%, -50%);
+    background: red;
+}
+
+#pesquisar>input{
+
+}
