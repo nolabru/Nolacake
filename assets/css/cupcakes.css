@@ -1,7 +1,15 @@
 @import url(global.css);
 
+* {
+    font-family: 'Quicksand', sans-serif;
+}
+
 body {
     background: var(--cor5);
+}
+
+.navBarItem{
+    margin: 0 30px;
 }
 
 .navBarItem>a {
@@ -9,24 +17,31 @@ body {
     font-weight: 500;
 }
 
-.navBarItem{
-    margin: 0 10px;
-}
-
-#pesquisar{
+#pesquisar {
     position: relative;
+    border-radius: 20px;
 }
 
-#pesquisar>span{
+#pesquisar>span {
     position: absolute;
-    width: 10px;
-    height: 10px;
+    width: 15px;
+    height: 15px;
     top: 50%;
-    left: 10px;
+    left: 20px;
     transform: translate(-50%, -50%);
-    background: red;
+    background: url(assets/lupa.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-#pesquisar>input{
+#pesquisar>input {
+    height: 100%;
+    width: 250px;
+    background: var(--cor1);
+    color: var(--cor5);
+    padding: 10px 20px 10px 35px;
+}
 
+#pesquisar>input::placeholder {
+    color: var(--cor5);
 }
