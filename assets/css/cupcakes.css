@@ -6,6 +6,12 @@
 
 body {
     background: var(--cor5);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .navBarItem{
@@ -44,4 +50,11 @@ body {
 
 #pesquisar>input::placeholder {
     color: var(--cor5);
+}
+
+#cupcakes{
+    width: 1000px;
+    height: 600px;
+    background: red;
+    margin-bottom: 40px;
 }
