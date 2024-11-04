@@ -54,7 +54,42 @@ body {
 
 #cupcakes{
     width: 1000px;
-    height: 600px;
+    height: 700px;
     background: red;
     margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.cardCupcake{
+    width: 230px;
+    border: 1px solid rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cardCupcake>span{
+    width: 150px;
+    height: 200px;
+    border: 1px solid blue;
+}
+
+.font{
+    font-family: "Sunday", sans-serif;
+}
+
+.title{
+    font-size: 16px;
+}
+
+.descricao{
+    
+}
+
+.preco{
+    
 }
