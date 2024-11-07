@@ -55,7 +55,7 @@ body {
 #cupcakes{
     width: 1000px;
     height: 700px;
-    background: red;
+    background: 1px solid red;
     margin-bottom: 40px;
     display: flex;
     align-items: center;
@@ -69,27 +69,43 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
+    padding: 0 15px;    
 }
 
-.cardCupcake>span{
-    width: 150px;
-    height: 200px;
-    border: 1px solid blue;
+.img{
+    width: 70%;
+    margin-bottom: 10px;
 }
 
 .font{
     font-family: "Sunday", sans-serif;
 }
 
+.title, .descricao, .preco{
+    width: 100%;
+    text-align: center;
+    color: var(--cor1);
+    margin-bottom: 5px;
+}
+
 .title{
     font-size: 16px;
+    margin-bottom: 5px;
 }
 
 .descricao{
-    
+    font-size: 13px;
 }
 
 .preco{
-    
+    font-size: 14px;
+}
+
+.adicionar{
+    background: var(--cor4);
+    font-size: 13px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: var(--cor5);
 }

@@ -18,7 +18,7 @@
     --cor1: #5d504e;
     --cor2: #ddd4cb;
     --cor3: #423c3b;
-    --cor4: #94807cb4;
+    --cor4: #94807c;
     --cor5: #f4f4f4;
 }
 
@@ -30,6 +30,6 @@
     text-decoration: none;
     box-sizing: border-box;
     list-style: none;
-    overflow: hidden;
+    overflow-x: hidden;
 }
     
