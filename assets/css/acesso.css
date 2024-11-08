@@ -46,7 +46,6 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
     align-items: center;
 }
 
@@ -82,12 +81,9 @@ body{
     background: var(--cor4);
     height: 40px;
     padding: 0 15px;
-    font-size: 16px;
-    color: var(--cor3);
-}
-
-.txtInput:focus{
-    outline: none;
+    font-size: 13px;
+    color: var(--cor2);
+    border-radius: 5px;
 }
 
 #entrar{
@@ -111,6 +107,11 @@ body{
     position: relative;
     display: flex;
     flex-direction: column;
+}
+
+.forms>label{
+    font-size: 14px;
+    margin-bottom: 5px;
 }
 
 #criarConta{
