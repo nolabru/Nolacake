@@ -1,38 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Nolacake | Login</title>
-        <link rel="stylesheet" href="../css/acesso.css">
-        <link rel="shortcut icon" href="../imgs/favicon.ico" type="image/x-icon">
-    </head>
-    <body>
-        <span id="box"></span>
-        <section id="login">
-            <section class="img login"></section>
-            <form id="formLogin" action="">
-                <h1 id="formTittle">Login</h1>
-                <section class="forms email">
-                    <label for="email">E-mail</label>
-                    <input class="txtInput" type="email" id="email">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nolacake | Login</title>
+    <link rel="stylesheet" href="../css/acesso.css">
+    <link rel="shortcut icon" href="../imgs/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <span id="box"></span>
+    <section id="login">
+        <section class="img login"></section>
+        <form id="formLogin" action="">
+            <h1 id="formTittle">Login</h1>
+            <section class="forms email">
+                <label for="email">E-mail</label>
+                <input class="txtInput" type="email" id="email">
+            </section>
+            <section class="forms senha">
+                <label for="password">Senha</label>
+                <span id="eye" onclick="passwordReveal()"></span>
+                <input class="txtInput" type="password" id="password">
+            </section>
+            <section id="opcoesSenha">
+                <section>
+                    <input type="checkbox" name="lembrar" id="lembrar">
+                    <label for="lembrar">Lembre-se de mim</label>
                 </section>
-                <section class="forms senha"    >
-                    <label for="password">Senha</label>
-                    <span id="eye" onclick="passwordReveal()"></span>
-                    <input class="txtInput" type="password" id="password">
-                </section>
-                <section id="opcoesSenha">
-                    <section>
-                        <input type="checkbox" name="lembrar" id="lembrar">
-                        <label for="lembrar">Lembre-se de mim</label>
-                    </section>
-                    <a href="">Esqueci a Senha</a>
-                </section>
-                <button id="entrar">Entrar</button>
-                <p id="criarConta">Não tem uma conta? <a href="sigin.html">Registre-se</a></p>
-            </form>
-        </section>
-        <script src="../javascript/script.js"></script>
-    </body>
+                <a href="">Esqueci a Senha</a>
+            </section>
+            <button id="entrar">Entrar</button>
+            <p id="criarConta">Não tem uma conta? <a href="sigin.html">Registre-se</a></p>
+        </form>
+    </section>
+    <script src="../javascript/script.js"></script>
+</body>
+
 </html>

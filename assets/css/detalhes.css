@@ -1,0 +1,25 @@
+@import url(global.css);
+
+body{
+    background: var(--cor5);
+}
+
+#cupcake-img{
+    width: 100px;
+}
+
+.navBarItem>a {
+    color: var(--cor1);
+    font-weight: 500;
+}
+
+#cupcake-detail{
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#cupcake-detail *{
+    border: 1px solid blue;
+}

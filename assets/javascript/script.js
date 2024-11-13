@@ -1,12 +1,12 @@
-function passwordReveal(){
+function passwordReveal() {
     let senha = document.getElementById('password');
     let verSenha = document.getElementById('eye');
 
-    if(senha.type === 'password'){
+    if (senha.type === 'password') {
         senha.setAttribute('type', 'text');
         verSenha.classList.add('reveal');
     }
-    else{
+    else {
         senha.setAttribute('type', 'password');
         verSenha.classList.remove('reveal');
     }
