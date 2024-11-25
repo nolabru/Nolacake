@@ -14,63 +14,60 @@ function pesquisarCupcakes() {
     });
 }
 
-// Obter o parâmetro 'sabor' da URL
 const urlParams = new URLSearchParams(window.location.search);
 const sabor = urlParams.get('sabor');
 
-// Dados dos cupcakes
 const cupcakeData = {
     brigadeiro: {
         name: "Brigadeiro",
-        img: "/assets/imgs/cupcake-1.png",
-        description: "Massa de chocolate com recheio e cobertura de brigadeiro",
+        img: "../imgs/cupcake-1.png",
+        description: "Uma deliciosa massa de chocolate fofinha, combinada com um recheio cremoso de brigadeiro e finalizada com uma cobertura generosa do mesmo doce clássico brasileiro. Ideal para os apaixonados por sabores intensos e irresistíveis!",
         price: "R$7,50"
     },
     baunilha: {
         name: "Baunilha",
-        img: "/assets/imgs/cupcake-7.png",
-        description: "Massa de baunilha com recheio e cobertura de baunilha",
+        img: "../imgs/cupcake-7.png",
+        description: "Um clássico atemporal! Massa leve e macia de baunilha, recheada com um creme suave e aromático da mesma essência, finalizada com uma cobertura delicada que derrete na boca.",
         price: "R$7,50"
     },
     "frutas-vermelhas": {
         name: "Frutas Vermelhas",
-        img: "/assets/imgs/cupcake-8.png",
-        description: "Massa de chocolate com recheio e cobertura de frutas vermelhas",
+        img: "../imgs/cupcake-8.png",
+        description: "Uma combinação perfeita de sabores! Massa de chocolate rica e úmida, recheada com um creme de frutas vermelhas levemente azedinho e coberta com uma camada brilhante e deliciosa do mesmo sabor.",
         price: "R$9,50"
     },
     morango: {
         name: "Morango",
-        img: "/assets/imgs/cupcake-4.png",
-        description: "Massa de baunilha com recheio e cobertura de morango",
+        img: "../imgs/cupcake-4.png",
+        description: "Massa leve de baunilha que combina perfeitamente com um recheio cremoso de morango fresco. A cobertura traz o toque final, com um doce sabor de morangos para encantar o paladar. ",
         price: "R$7,50"
     },
     oreo: {
         name: "Oreo",
-        img: "/assets/imgs/cupcake-6.png",
-        description: "Massa de chocolate com recheio e cobertura de oreo",
+        img: "../imgs/cupcake-6.png",
+        description: "Massa de chocolate rica e macia, recheada com um creme irresistível de Oreo e finalizada com uma cobertura cremosa que inclui pedaços crocantes do famoso biscoito.",
         price: "R$9,50"
     },
     "red-velvet": {
         name: "Red Velvet",
-        img: "/assets/imgs/cupcake-5.png",
-        description: "Massa de beterraba com recheio e cobertura de baunilha",
+        img: "../imgs/cupcake-5.png",
+        description: "Uma opção surpreendentemente deliciosa! A massa de beterraba traz uma textura úmida e um leve toque de doçura natural, combinada com um recheio e cobertura suaves de baunilha, criando uma harmonia única de sabores.",
         price: "R$9,50"
     },
     sensacao: {
         name: "Sensação",
-        img: "/assets/imgs/cupcake-2.png",
-        description: "Massa de chocolate com recheio e cobertura de morango",
+        img: "../imgs/cupcake-2.png",
+        description: "Uma combinação clássica e irresistível! Massa de chocolate macia, recheada com um creme de morango doce e coberta com uma camada brilhante e deliciosa do mesmo sabor.",
         price: "R$8,50"
     },
     "tutti-frutti": {
         name: "Tutti Frutti",
-        img: "/assets/imgs/cupcake-3.png",
-        description: "Massa de chocolate com recheio e cobertura de tutti frutti",
+        img: "../imgs/cupcake-3.png",
+        description: "Para os fãs de sabores coloridos e divertidos! Massa de chocolate rica e úmida, recheada com um creme alegre de tutti-frutti e coberta com uma camada vibrante que garante um toque doce e refrescante.",
         price: "R$8,50"
     }
 };
 
-// Verificar se o sabor existe no objeto
 if (sabor && cupcakeData[sabor]) {
     const cupcake = cupcakeData[sabor];
     document.getElementById('cupcake-name').textContent = cupcake.name;

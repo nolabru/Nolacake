@@ -19,21 +19,38 @@
                 <span id="lupa"></span>
                 <input type="text" id="searchInput" placeholder="Pesquisar" oninput="pesquisarCupcakes()">
             </li>
-            <li class="navBarItem"><a href="/index.html">Home</a></li>
+            <li class="navBarItem"><a href="">Home</a></li>
             <li class="navBarItem"><a href="#">Cupcakes</a></li>
             <li class="navBarItem"><a href="">Favoritos</a></li>
             <li class="navBarItem"><a href="">Pedidos</a></li>
             <li class="navBarItem"><a href="">Avaliações</a></li>
             <li class="navBarItem"><a href="">Sobre Nós</a></li>
-            <li class="navBarItem"><a href="login.html" target="_blank">Conta</a></li>
+            <li class="navBarItem">
+                <a href="assets/html/login.html">
+                    <?php 
+                        if (isset($_GET['usuario'])) {
+                            // Pega o nome completo
+                            $nomeCompleto = $_GET['usuario'];
+
+                            // Divide o nome completo em partes (palavras) e pega o primeiro nome
+                            $primeiroNome = explode(' ', $nomeCompleto)[0];
+
+                            // Exibe o primeiro nome
+                            echo htmlspecialchars($primeiroNome);
+                        } else {
+                            echo 'Registre-se/Faça Login';
+                        }
+                    ?>
+                </a>
+            </a></li>
         </ul>
         <a href=""><img id="cart" src="../imgs/carrinhoComprasEscuro.png" alt=""></a>
     </nav>
 
     <section id="cupcakes">
         <div class="cardCupcake" data-sabor="brigadeiro">
-            <a href="detalhes.html?sabor=brigadeiro">
-                <img class="img" src="/assets/imgs/cupcake-1.png" alt="Brigadeiro">
+            <a href="detalhes.php?sabor=brigadeiro&usuario=<?php echo urlencode($_GET['usuario'] ?? ''); ?>">
+                <img class="img" src="../imgs/cupcake-1.png" alt="Brigadeiro">
                 <h1 class="title font">Brigadeiro</h1>
                 <p class="descricao">Massa de chocolate com recheio e cobertura de brigadeiro</p>
                 <h2 class="preco font">R$7,50</h2>
@@ -41,8 +58,8 @@
             <a class="adicionar" href="#">Adicionar ao Carrinho</a>
         </div>
         <div class="cardCupcake" data-sabor="baunilha">
-            <a href="detalhes.html?sabor=baunilha">
-                <img class="img" src="/assets/imgs/cupcake-7.png" alt="Baunilha">
+            <a href="detalhes.php?sabor=baunilha&usuario=<?php echo urlencode($_GET['usuario'] ?? ''); ?>">
+                <img class="img" src="../imgs/cupcake-7.png" alt="Baunilha">
                 <h1 class="title font">Baunilha</h1>
                 <p class="descricao">Massa de baunilha com recheio e cobertura de baunilha</p>
                 <h2 class="preco font">R$7,50</h2>
@@ -50,8 +67,8 @@
             <a class="adicionar" href="#">Adicionar ao Carrinho</a>
         </div>
         <div class="cardCupcake" data-sabor="frutas-vermelhas">
-            <a href="detalhes.html?sabor=frutas-vermelhas">
-                <img class="img" src="/assets/imgs/cupcake-8.png" alt="Frutas Vermelhas">
+            <a href="detalhes.php?sabor=frutas-vermelhas&usuario=<?php echo urlencode($_GET['usuario'] ?? ''); ?>">
+                <img class="img" src="../imgs/cupcake-8.png" alt="Frutas Vermelhas">
                 <h1 class="title font">Frutas Vermelhas</h1>
                 <p class="descricao">Massa de chocolate com recheio e cobertura de frutas vermelhas</p>
                 <h2 class="preco font">R$9,50</h2>
@@ -59,8 +76,8 @@
             <a class="adicionar" href="#">Adicionar ao Carrinho</a>
         </div>
         <div class="cardCupcake" data-sabor="morango">
-            <a href="detalhes.html?sabor=morango">
-                <img class="img" src="/assets/imgs/cupcake-4.png" alt="Morango">
+            <a href="detalhes.php?sabor=morango&usuario=<?php echo urlencode($_GET['usuario'] ?? ''); ?>">
+                <img class="img" src="../imgs/cupcake-4.png" alt="Morango">
                 <h1 class="title font">Morango</h1>
                 <p class="descricao">Massa de baunilha com recheio e cobertura de morango</p>
                 <h2 class="preco font">R$7,50</h2>
@@ -68,8 +85,8 @@
             <a class="adicionar" href="#">Adicionar ao Carrinho</a>
         </div>
         <div class="cardCupcake" data-sabor="oreo">
-            <a href="detalhes.html?sabor=oreo">
-                <img class="img" src="/assets/imgs/cupcake-6.png" alt="Oreo">
+            <a href="detalhes.php?sabor=oreo&usuario=<?php echo urlencode($_GET['usuario'] ?? ''); ?>">
+                <img class="img" src="../imgs/cupcake-6.png" alt="Oreo">
                 <h1 class="title font">Oreo</h1>
                 <p class="descricao">Massa de chocolate com recheio e cobertura de oreo</p>
                 <h2 class="preco font">R$9,50</h2>
@@ -77,8 +94,8 @@
             <a class="adicionar" href="#">Adicionar ao Carrinho</a>
         </div>
         <div class="cardCupcake" data-sabor="red-velvet">
-            <a href="detalhes.html?sabor=red-velvet">
-                <img class="img" src="/assets/imgs/cupcake-5.png" alt="Red Velvet">
+            <a href="detalhes.php?sabor=red-velvet&usuario=<?php echo urlencode($_GET['usuario'] ?? ''); ?>">
+                <img class="img" src="../imgs/cupcake-5.png" alt="Red Velvet">
                 <h1 class="title font">Red Velvet</h1>
                 <p class="descricao">Massa de beterraba com recheio e cobertura de baunilha</p>
                 <h2 class="preco font">R$9,50</h2>
@@ -86,8 +103,8 @@
             <a class="adicionar" href="#">Adicionar ao Carrinho</a>
         </div>
         <div class="cardCupcake" data-sabor="sensacao">
-            <a href="detalhes.html?sabor=sensacao">
-                <img class="img" src="/assets/imgs/cupcake-2.png" alt="Sensação">
+            <a href="detalhes.php?sabor=sensacao&usuario=<?php echo urlencode($_GET['usuario'] ?? ''); ?>">
+                <img class="img" src="../imgs/cupcake-2.png" alt="Sensação">
                 <h1 class="title font">Sensação</h1>
                 <p class="descricao">Massa de chocolate com recheio e cobertura de morango</p>
                 <h2 class="preco font">R$8,50</h2>
@@ -95,8 +112,8 @@
             <a class="adicionar" href="#">Adicionar ao Carrinho</a>
         </div>
         <div class="cardCupcake" data-sabor="tutti-frutti">
-            <a href="detalhes.html?sabor=tutti-frutti">
-                <img class="img" src="/assets/imgs/cupcake-3.png" alt="Tutti Frutti">
+            <a href="detalhes.php?sabor=tutti-frutti&usuario=<?php echo urlencode($_GET['usuario'] ?? ''); ?>">
+                <img class="img" src="../imgs/cupcake-3.png" alt="Tutti Frutti">
                 <h1 class="title font">Tutti Frutti</h1>
                 <p class="descricao">Massa de chocolate com recheio e cobertura de tutti frutti</p>
                 <h2 class="preco font">R$8,50</h2>
@@ -104,9 +121,7 @@
             <a class="adicionar" href="#">Adicionar ao Carrinho</a>
         </div>
     </section>
-
-
-    <script src="/assets/javascript/cupcakes.js"></script>
+    <script src="../javascript/cupcakes.js"></script>
 </body>
 
 </html>

@@ -3,7 +3,7 @@
 body {
     width: 100%;
     height: 100vh;
-    background: linear-gradient(90deg, #5d504ed2, #5d504ed2), url(/assets/imgs/bg_home.png);
+    background: linear-gradient(90deg, #5d504ed2, #5d504ed2), url(../imgs/bg_home.png);
     background-size: cover;
 }
 

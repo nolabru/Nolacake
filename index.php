@@ -2,7 +2,7 @@
 <html lang="pt-br">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"   >
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Nolacake | Os Melhores Cupcakes do Brasil</title>
         <link rel="shortcut icon" href="assets/imgs/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="assets/css/global.css">
@@ -13,12 +13,29 @@
             <a href=""><img id="logo" src="assets/imgs/logo.png" alt=""></a>
             <ul id="navBarList">
                 <li class="navBarItem"><a href="">Home</a></li>
-                <li class="navBarItem"><a href="assets/html/cupcakes.html">Cupcakes</a></li>
+                <li class="navBarItem"><a href="assets/html/cupcakes.php?usuario=<?php echo urlencode($_GET['usuario'] ?? ''); ?>">Cupcakes</a></li>
                 <li class="navBarItem"><a href="">Favoritos</a></li>
                 <li class="navBarItem"><a href="">Pedidos</a></li>
                 <li class="navBarItem"><a href="">Avaliações</a></li>
-                <li class="navBarItem"><a href="assets/html/sobreNos.html">Sobre Nós</a></li>
-                <li class="navBarItem"><a href="assets/html/login.html">Conta</a></li>
+                <li class="navBarItem"><a href="">Sobre Nós</a></li>
+                <li class="navBarItem">
+                    <a href="assets/html/login.html">
+                        <?php 
+                            if (isset($_GET['usuario'])) {
+                                // Pega o nome completo
+                                $nomeCompleto = $_GET['usuario'];
+
+                                // Divide o nome completo em partes e pega o primeiro nome
+                                $primeiroNome = explode(' ', $nomeCompleto)[0];
+
+                                // Exibe o primeiro nome
+                                echo htmlspecialchars($primeiroNome);
+                            } else {
+                                echo 'Registre-se/Faça Login';
+                            }
+                        ?>
+                    </a>
+                </li>
             </ul>
             <a href=""><img id="cart" src="assets/imgs/carrinhoCompras.png" alt=""></a>
         </nav>      
@@ -32,5 +49,4 @@
             </section>
         </section>      
     </body>
-    <script src="assets/javascript/script.js"></script>
 </html>
