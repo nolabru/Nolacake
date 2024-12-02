@@ -1,0 +1,49 @@
+@import url(global.css);
+
+body {
+    background: var(--cor5);
+    width: 100%;
+    height: 100vh;
+    display: block;
+}
+
+.navBarItem>a {
+    color: var(--cor1);
+    font-weight: 500;
+}
+
+#historia{
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    padding: 100px 350px;
+}
+
+#imagemHistoria{
+    width: 50%;
+    background: url(../css/assets/historia.jpg);
+    background-size: cover;
+}
+
+#textoHistoria{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+#textoHistoria > h1{
+    font-family: "Sunday", sans-serif;
+    color: var(--cor1);
+    font-size: 25px;
+}
+
+.descricao{
+
+    font-family: "Quicksand", "sans-serif";
+    font-size: 18px;
+    text-align: left;
+    color: var(--cor4);
+    text-align: justify;
+}    

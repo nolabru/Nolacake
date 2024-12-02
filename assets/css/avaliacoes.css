@@ -1,0 +1,36 @@
+@import url(global.css);
+
+#avaliacoes{
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.avaliacao{
+    width: 800px;
+    height: 150px;
+    background: #f0f0f0;
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.avaliacao > h1{
+    color: var(--cor1);
+    font-size: 18px;
+    font-family: "Sunday", sans-serif;
+}
+
+.avaliacao > p{
+    font-family: "Quicksand", sans-serif;
+    color: var(--cor4);
+}
+
+.avaliacao > img{
+    width: 100px;
+    margin-right: 15px;
+}

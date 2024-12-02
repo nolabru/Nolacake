@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nolacake | Cupcakes</title>
-    <link rel="shortcut icon" href="../imgs/favicon.ico" type="image/x-icon">
+    <title>Nolacake | Carrinho</title>
+    <link rel="shortcut icon" href="../imgs/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/detalhes.css">
+    <link rel="stylesheet" href="../css/carrinho.css">
 </head>
 
 <body>
@@ -38,21 +39,22 @@
                         ?>
                     </a>
                 </li>
-        </ul>
-        <a href=""><img id="cart" src="../imgs/carrinhoComprasEscuro.png" alt=""></a>
-    </nav>      
-    <section id="cupcake-detail">
-        <section id="cardCupcake-detail">
-            <img id="cupcake-img" alt="Imagem do cupcake">
-            <section>
-                <h1 id="cupcake-name"></h1>
-                <h2 id="cupcake-price"></h2>
-                <p id="cupcake-description"></p>
-            </section>
+            </ul>
+        <a href=""><img id="cart" src="../imgs/carrinhoComprasEscuro.png" alt="Carrinho"></a>
+    </nav>
+    <main>
+        <section id="carrinho">
+            <div id="itensCarrinho">
+                <!-- Os itens do carrinho serão adicionados aqui dinamicamente -->
+            </div>
+            <div id="resumoCarrinho">
+                <h2>Total<br><br> R$<span id="totalPreco">0.00</span></h2>
+                <button id="finalizarCompra">Finalizar Compra</button>
+            </div>
         </section>
-    </section>
-    <script src="../javascript/cupcakes.js"></script>
-    <script src="../javascript/carrinho.js"></script>
+    </main>
+    <!-- Vincule o arquivo de script atualizado -->
+    <script src="../javascript/carrinho.js" defer></script>
 </body>
 
 </html>

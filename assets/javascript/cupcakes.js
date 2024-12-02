@@ -6,10 +6,10 @@ function pesquisarCupcakes() {
     cupcakeCards.forEach(card => {
         const sabor = card.getAttribute('data-sabor').toLowerCase();
 
-        if (sabor.startsWith(searchTerm)) {
-            card.style.visibility = 'visible';
+        if (sabor.startsWith(searchTerm)) {  // Verifica se o nome começa com o termo de pesquisa
+            card.style.display = 'block'; // Mostra o cupcake
         } else {
-            card.style.visibility = 'hidden';
+            card.style.display = 'none'; // Esconde o cupcake
         }
     });
 }
@@ -76,4 +76,27 @@ if (sabor && cupcakeData[sabor]) {
     document.getElementById('cupcake-price').textContent = cupcake.price;
 } else {
     document.getElementById('cupcake-detail').textContent = "Cupcake não encontrado!";
+}
+
+function adicionarFavorito(sabor, descricao, preco, imagem) {
+    alert(`${sabor} foi adicionado aos Favoritos!`);
+    // Verifica se os favoritos já existem no localStorage
+    let favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
+
+    // Verifica se o cupcake já está nos favoritos
+    const cupcakeExistente = favoritos.find(cupcake => cupcake.sabor === sabor);
+
+    if (cupcakeExistente) {
+        // Remove o cupcake dos favoritos
+        favoritos = favoritos.filter(cupcake => cupcake.sabor !== sabor);
+    } else {
+        // Adiciona o cupcake aos favoritos
+        favoritos.push({ sabor, descricao, preco, imagem });
+    }
+
+    // Atualiza o localStorage com os favoritos
+    localStorage.setItem('favoritos', JSON.stringify(favoritos));
+
+    // Atualiza a aparência do botão de curtir
+    document.querySelector(`.curtir[data-sabor="${sabor}"]`).classList.toggle('ativo', !cupcakeExistente);
 }

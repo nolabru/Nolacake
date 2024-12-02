@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nolacake | Cupcakes</title>
-    <link rel="shortcut icon" href="../imgs/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../imgs/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/detalhes.css">
+    <link rel="stylesheet" href="../css/sobrenos.css">
 </head>
 
 <body>
     <nav id="navBar">
-        <a href="/Nolacake/index.php?usuario=<?php echo urlencode($_GET['usuario'] ?? '');?>"><img id="logo" src="../imgs/logoEscuro.png" alt=""></a>
+        <a href="/Nolacake/index.php?usuario=<?php echo urlencode($_GET['usuario'] ?? '');?>"><img id="logo" src="../imgs/logoEscuro.png" alt="Logo Nolacake"></a>
         <ul id="navBarList">
                 <li class="navBarItem"><a href="/Nolacake/index.php?usuario=<?php echo urlencode($_GET['usuario'] ?? '');?>">Home</a></li>
                 <li class="navBarItem"><a href="../html/cupcakes.php?usuario=<?php echo urlencode($_GET['usuario'] ?? '');?>">Cupcakes</a></li>
@@ -39,20 +39,24 @@
                     </a>
                 </li>
         </ul>
-        <a href=""><img id="cart" src="../imgs/carrinhoComprasEscuro.png" alt=""></a>
-    </nav>      
-    <section id="cupcake-detail">
-        <section id="cardCupcake-detail">
-            <img id="cupcake-img" alt="Imagem do cupcake">
-            <section>
-                <h1 id="cupcake-name"></h1>
-                <h2 id="cupcake-price"></h2>
-                <p id="cupcake-description"></p>
+        <a href="../html/carrinho.php?usuario=<?php echo urlencode($_GET['usuario'] ?? ''); ?>">
+            <img id="cart" src="../imgs/carrinhoComprasEscuro.png" alt="Carrinho de compras">
+        </a>
+    </nav>
+    <section>   
+        <div id="historia">
+            <section id="imagemHistoria">
+
             </section>
-        </section>
+            <section id="textoHistoria">
+                <h1>Nossa História</h1>
+                <p class="descricao">A Nolacake nasceu de uma paixão por criar momentos especiais e doces memoráveis. Fundada por um grupo de amigos que compartilham a adoração por cupcakes irresistíveis, nossa loja transforma cada mordida em uma experiência única, com receitas exclusivas e ingredientes de alta qualidade.</p>
+                <p class="descricao">Inspirada pela alegria que um cupcake pode proporcionar, a Nolacake começou em uma cozinha caseira, onde testamos e aperfeiçoamos receitas para garantir que nossos produtos sejam deliciosos e feitos com carinho.</p>
+                <p class="descricao">Nossa missão é tornar cada celebração mais doce, oferecendo cupcakes feitos para alegrar o seu dia, seja em aniversários, reuniões ou em qualquer momento especial, sempre com sabor e criatividade.</p>
+                <p class="descricao">A Nolacake cresceu, mas nossa essência continua a mesma: fazer cupcakes que encantam. Estamos aqui para adoçar sua vida com a melhor confeitaria artesanal, criando experiências cheias de sabor.</p>
+            </section>
+        </div>
     </section>
-    <script src="../javascript/cupcakes.js"></script>
-    <script src="../javascript/carrinho.js"></script>
 </body>
 
 </html>

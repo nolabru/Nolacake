@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nolacake | Cupcakes</title>
-    <link rel="shortcut icon" href="../imgs/favicon.ico" type="image/x-icon">
+    <title>Nolacake | Favoritos</title>
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/detalhes.css">
+    <link rel="stylesheet" href="../css/cupcakes.css">
+    <link rel="stylesheet" href="../css/favoritos.css">
 </head>
 
 <body>
     <nav id="navBar">
-        <a href="/Nolacake/index.php?usuario=<?php echo urlencode($_GET['usuario'] ?? '');?>"><img id="logo" src="../imgs/logoEscuro.png" alt=""></a>
+        <a href="/Nolacake/index.php?usuario=<?php echo urlencode($_GET['usuario'] ?? '');?>"><img id="logo" src="../imgs/logoEscuro.png" alt="Logo Nolacake"></a>
         <ul id="navBarList">
                 <li class="navBarItem"><a href="/Nolacake/index.php?usuario=<?php echo urlencode($_GET['usuario'] ?? '');?>">Home</a></li>
                 <li class="navBarItem"><a href="../html/cupcakes.php?usuario=<?php echo urlencode($_GET['usuario'] ?? '');?>">Cupcakes</a></li>
@@ -39,20 +39,15 @@
                     </a>
                 </li>
         </ul>
-        <a href=""><img id="cart" src="../imgs/carrinhoComprasEscuro.png" alt=""></a>
-    </nav>      
-    <section id="cupcake-detail">
-        <section id="cardCupcake-detail">
-            <img id="cupcake-img" alt="Imagem do cupcake">
-            <section>
-                <h1 id="cupcake-name"></h1>
-                <h2 id="cupcake-price"></h2>
-                <p id="cupcake-description"></p>
-            </section>
-        </section>
+        <a href="../html/carrinho.php?usuario=<?php echo urlencode($_GET['usuario'] ?? ''); ?>">
+            <img id="cart" src="../imgs/carrinhoComprasEscuro.png" alt="Carrinho de compras">
+        </a>
+    </nav>
+
+    <section id="cupcakesFavoritos">
+        <!-- Os cupcakes favoritos serão adicionados aqui -->
     </section>
-    <script src="../javascript/cupcakes.js"></script>
-    <script src="../javascript/carrinho.js"></script>
+    <script src="../javascript/favoritos.js"></script>
 </body>
 
 </html>
