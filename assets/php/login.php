@@ -41,10 +41,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             header("Location: /nolacake/index.php?usuario=" . urlencode($nomeUsuario));
             exit;
         } else {
-            echo "Senha incorreta.";
+            echo "<script>alert('Senha incorreta.');</script>";
         }
     } else {
-        echo "E-mail não encontrado.";
+        echo "<script>alert('E-mail não encontrado, tente novamente.');</script>";
     }
 
     $stmt->close();
